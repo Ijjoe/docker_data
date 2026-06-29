@@ -10,3 +10,5 @@ COPY main.py ./
 
 CMD ["uv", "run", "main.py"]
 
+
+

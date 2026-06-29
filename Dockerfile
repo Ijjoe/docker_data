@@ -1,0 +1,12 @@
+FROM python:3.12-slim
+
+RUN pip install uv
+WORKDIR /app
+
+COPY pyproject.toml uv.lock ./
+RUN uv sync
+
+COPY main.py ./
+
+CMD ["uv", "run", "main.py"]
+
